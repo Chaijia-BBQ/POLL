@@ -1,8 +1,11 @@
 #include "mainwindow.h"
-
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include <login.h>
+
+int X = 0;
+int Y = 0;
 
 int main(int argc, char *argv[])
 {
@@ -15,11 +18,12 @@ int main(int argc, char *argv[])
 
         if (translator.load(":/i18n/" + baseName)) {
             a.installTranslator(&translator);
-            //ssssss
             break;
         }
     }
     MainWindow w;
-    w.show();
+    Login l;
+    l.show();
+    QObject::connect(&l, SIGNAL(show_mainwindow()), &w, SLOT(receiveLogin()));
     return a.exec();
 }
