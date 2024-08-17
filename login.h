@@ -3,6 +3,13 @@
 
 #include <QDialog>
 
+extern QString name;
+extern QString birthday;
+extern QString username;
+extern QString gender;
+extern QString personality;
+extern QString hobbies;
+
 namespace Ui {
 class Login;
 }
@@ -14,6 +21,7 @@ class Login : public QDialog
 public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
+
 
 signals:
     void show_mainwindow();

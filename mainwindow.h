@@ -2,13 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <q_one.h>
 #include <QPushButton>
-//#include <exit_button.h>
 #include <QRandomGenerator>
 
 extern int X;
 extern int Y;
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

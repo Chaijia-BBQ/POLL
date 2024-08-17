@@ -10,20 +10,23 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    findings.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    q_one.cpp
+    question.cpp
 
 HEADERS += \
+    findings.h \
     login.h \
     mainwindow.h \
-    q_one.h
+    question.h
 
 FORMS += \
+    findings.ui \
     login.ui \
     mainwindow.ui \
-    q_one.ui
+    question.ui
 
 TRANSLATIONS += \
     POLL_zh_CN.ts
@@ -37,3 +40,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     question.txt
+
+RESOURCES += \
+    IMG.qrc
+    #RC_ICONS = Icon\pig.ico

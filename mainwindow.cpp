@@ -1,18 +1,18 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <question.h>
 
-extern int X;
-extern int Y;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->In->setFont(QFont("宋体", 22));
-    ui->Exit->setFont(QFont("宋体", 22));
+    ui->In->setFont(QFont("宋体", 36));
+    ui->Exit->setFont(QFont("宋体", 36));
     X = 0;
     Y = 0;
+    //this->setWindowIcon(QIcon(":/IMG/icon/pig.jpg"));
 
 }
 
@@ -32,6 +32,8 @@ void MainWindow::on_In_clicked()
     this->close();
     //secondwidget *q_one = new secondwidget();
     //q_one->show();
+    question *q = new question();
+    q->show();
 }
 
 void MainWindow::on_Exit_clicked()

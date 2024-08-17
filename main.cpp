@@ -6,6 +6,12 @@
 
 int X = 0;
 int Y = 0;
+QString name;
+QString birthday;
+QString username;
+QString gender;
+QString personality;
+QString hobbies;
 
 int main(int argc, char *argv[])
 {
